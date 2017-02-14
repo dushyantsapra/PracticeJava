@@ -1,18 +1,19 @@
 package com.javaSampleCode.enums;
 
 public enum GRADES {
-	POOR(1, "Poor"), GOOD(2, "Good"), EXCELLENT(3, "Excellent");
+	EXCELLENT(1, "Excellent"), GOOD(2, "Good"), POOR(3, "Poor");
 
-	private int rankId;
-	private String comment;
+	private int iValue;
+	private String sValue;
 
-	private GRADES(int rankId, String comment) {
-		this.rankId = rankId;
-		this.comment = comment;
+	private GRADES(int iValue, String sValue) {
+		this.iValue = iValue;
+		this.sValue = sValue;
 	}
 
 	@Override
 	public String toString() {
-		return super.toString() + " " + this.rankId + " " + this.comment;
+		return super.toString() + " " + this.iValue + " " + this.sValue;
 	}
+	
 }
