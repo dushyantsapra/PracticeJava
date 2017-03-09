@@ -1,31 +1,32 @@
 package com.javaSampleCode.util;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.util.Date;
-
-//1477702800
+import java.time.LocalDate;
+import java.time.temporal.TemporalField;
+import java.time.temporal.WeekFields;
+import java.util.Locale;
 
 public class DateFormatSampleCode {
-	public static void main(String[] args) throws ParseException {
-		DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
+	public static void main(String[] args) {
+		LocalDate localDate = LocalDate.of(2016, 01, 27);
+		System.out.println(localDate);
+		localDate = localDate.plusMonths(1);
+		System.out.println(localDate);
+		localDate = localDate.plusMonths(1);
+		System.out.println(localDate);
 
-		Date date = sdf.parse("2016-10-29T03:00:00+0200");
+		System.out.println();
+		
+		TemporalField weekOfYear = WeekFields.of(Locale.getDefault()).weekOfWeekBasedYear();
+        localDate = LocalDate.of(2017, 01, 27);
+        System.out.println(localDate.get(weekOfYear));
+		
+		System.out.println();
 
-		String timeZone = "Europe/Stockholm";
-
-		LocalDateTime currentTime = LocalDateTime.ofInstant(date.toInstant(), ZoneId.of(timeZone));
-
-		currentTime = currentTime.plusDays(1);
-		ZonedDateTime zdt = currentTime.atZone(ZoneId.of("Europe/Stockholm"));
-		System.out.println(zdt);
-
-		long mili = 1477702800000L;
-		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
-		System.out.println(dateFormat.format(mili));
+		org.joda.time.LocalDate localDate1 = org.joda.time.LocalDate.parse("2016-01-30");
+		System.out.println(localDate1);
+		localDate1 = localDate1.plusMonths(1);
+		System.out.println(localDate1);
+		localDate1 = localDate1.plusMonths(1);
+		System.out.println(localDate1);
 	}
 }
