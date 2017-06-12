@@ -2,23 +2,23 @@ package com.javaSampleCode.concurrency;
 
 import java.util.concurrent.CountDownLatch;
 
-class Worker implements Runnable {
-	private final CountDownLatch startSignal;
-	private final CountDownLatch doneSignal;
+//Latches are for waiting for events; barriers are for waiting for other threads. - Java Concurrency in Practice
 
-	Worker(CountDownLatch startSignal, CountDownLatch doneSignal) {
-		this.startSignal = startSignal;
-		this.doneSignal = doneSignal;
+class Worker implements Runnable {
+	private final CountDownLatch latch;
+
+	Worker(CountDownLatch latch) {
+		this.latch = latch;
 	}
 
 	@Override
 	public void run() {
 		try {
-			startSignal.await();
 			doWork();
-			doneSignal.countDown();
-		} catch (InterruptedException ex) {
-		} // return;
+			latch.countDown();
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
 	}
 
 	void doWork() {
@@ -33,15 +33,13 @@ public class CountDownLatchSampleCode {
 
 	public static void main(String[] args) throws InterruptedException {
 		int threadCount = 10;
-		CountDownLatch startSignal = new CountDownLatch(1);
-		CountDownLatch doneSignal = new CountDownLatch(threadCount);
+		CountDownLatch latch = new CountDownLatch(threadCount);
 
 		for (int i = 0; i < threadCount; ++i)
-			new Thread(new Worker(startSignal, doneSignal)).start();
+			new Thread(new Worker(latch)).start();
 
-		doSomethingElse(); // don't let run yet
-		startSignal.countDown(); // let all threads proceed
-		doneSignal.await(); // wait for all to finish
+		latch.await();
+		doSomethingElse();
 		System.out.println(Thread.currentThread().getName() + " Work Done");
 	}
 }

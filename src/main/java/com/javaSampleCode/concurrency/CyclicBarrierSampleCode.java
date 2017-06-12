@@ -3,6 +3,8 @@ package com.javaSampleCode.concurrency;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
+//Latches are for waiting for events; barriers are for waiting for other threads. - Java Concurrency in Practice
+
 class Task implements Runnable {
 	private CyclicBarrier barrier;
 
@@ -44,12 +46,12 @@ public class CyclicBarrierSampleCode {
 
 		System.out.println("\n\n\n\n\n\n\n\n\n");
 
-		t1 = new Thread(new Task(cb), "Thread 1");
-		t2 = new Thread(new Task(cb), "Thread 2");
-		t3 = new Thread(new Task(cb), "Thread 3");
-
-		t1.start();
-		t2.start();
-		t3.start();
+		// t1 = new Thread(new Task(cb), "Thread 1");
+		// t2 = new Thread(new Task(cb), "Thread 2");
+		// t3 = new Thread(new Task(cb), "Thread 3");
+		//
+		// t1.start();
+		// t2.start();
+		// t3.start();
 	}
 }
