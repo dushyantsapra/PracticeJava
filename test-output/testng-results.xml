@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="50" started-at="2017-06-24T12:10:23Z" finished-at="2017-06-24T12:10:23Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="50" started-at="2017-06-24T12:10:23Z" finished-at="2017-06-24T12:10:23Z">
+      <class name="com.javaSampleCode.testng.DataProviderAndFactorySampleCodeServiceTest">
+        <test-method status="PASS" signature="testMethod()[pri:0, instance:com.javaSampleCode.testng.DataProviderAndFactorySampleCodeServiceTest@6a2bcfcb]" name="testMethod" duration-ms="20" started-at="2017-06-24T17:40:23Z" finished-at="2017-06-24T17:40:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+      </class> <!-- com.javaSampleCode.testng.DataProviderAndFactorySampleCodeServiceTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

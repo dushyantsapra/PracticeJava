@@ -1,6 +1,8 @@
 package com.javaSampleCode.exceptions;
 
-public class CustomResource implements AutoCloseable {
+import java.io.Closeable;
+
+public class CustomResource implements Closeable {
 	public void accessResource() throws RuntimeException {
 		throw new RuntimeException("I wanted to access this resource. Bad luck. Its dirty resource !!!");
 	}

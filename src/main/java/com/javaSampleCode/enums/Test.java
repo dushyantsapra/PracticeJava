@@ -1,17 +1,28 @@
 package com.javaSampleCode.enums;
 
-public class Test extends AbstractClassTest {
+import java.util.PriorityQueue;
+
+class Book implements Comparable<Book> {
+	private int id;
+
+	public Book(int id) {
+		this.id = id;
+	}
+
 	@Override
-	public void abc() {
-		System.out.println("From Package Enums");
+	public int compareTo(Book o) {
+		if (this.id < o.id) {
+			return -1;
+		} else if (this.id == o.id) {
+			return 0;
+		} else {
+			return 1;
+		}
 	}
+}
 
-	protected void def() {
-		System.out.println("From Package Enums Method def");
-	}
-
+public class Test {
 	public static void main(String[] args) {
-		AbstractClassTest obj = new Test();
-		obj.abc();
+		PriorityQueue<Book> pq = new PriorityQueue<>(14);
 	}
 }
