@@ -18,30 +18,32 @@ class EvenOddProblemUsingLockAndConditionMonitor {
 	}
 
 	public void printEven(int num) {
-		lock.lock();
 		try {
-			while (threadType != EvenOddThreadType.EVEN)
+			lock.lock();
+			if (threadType != EvenOddThreadType.EVEN)
 				evenCondition.await();
 			System.out.println(num);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} finally {
-			lock.unlock();
+			threadType = EvenOddThreadType.ODD;
 			oddCondition.signalAll();
+			lock.unlock();
 		}
 	}
 
 	public void printOdd(int num) {
-		lock.lock();
 		try {
-			while (threadType != EvenOddThreadType.ODD)
+			lock.lock();
+			if (threadType != EvenOddThreadType.ODD)
 				oddCondition.await();
 			System.out.println(num);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} finally {
-			lock.unlock();
+			threadType = EvenOddThreadType.EVEN;
 			evenCondition.signalAll();
+			lock.unlock();
 		}
 	}
 }

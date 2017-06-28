@@ -1,9 +1,5 @@
 package com.javaSampleCode.concurrency;
 
-enum PrintNumberThreadType {
-	ONE, TWO, THREE;
-}
-
 class PrintNumberMonitor {
 	private PrintNumberThreadType currentThreadType;
 
