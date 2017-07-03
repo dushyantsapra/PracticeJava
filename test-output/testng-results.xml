@@ -1,17 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="50" started-at="2017-06-24T12:10:23Z" finished-at="2017-06-24T12:10:23Z">
+  <suite name="Default suite" duration-ms="275" started-at="2017-07-03T17:39:18Z" finished-at="2017-07-03T17:39:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="50" started-at="2017-06-24T12:10:23Z" finished-at="2017-06-24T12:10:23Z">
-      <class name="com.javaSampleCode.testng.DataProviderAndFactorySampleCodeServiceTest">
-        <test-method status="PASS" signature="testMethod()[pri:0, instance:com.javaSampleCode.testng.DataProviderAndFactorySampleCodeServiceTest@6a2bcfcb]" name="testMethod" duration-ms="20" started-at="2017-06-24T17:40:23Z" finished-at="2017-06-24T17:40:23Z">
+    <test name="Default test" duration-ms="275" started-at="2017-07-03T17:39:18Z" finished-at="2017-07-03T17:39:18Z">
+      <class name="com.javaSampleCode.mockito.MockingSampleCode">
+        <test-method status="PASS" signature="doThrowWithWhenUsingMethodWithReturnType()[pri:0, instance:com.javaSampleCode.mockito.MockingSampleCode@7f560810]" name="doThrowWithWhenUsingMethodWithReturnType" duration-ms="193" started-at="2017-07-03T23:09:18Z" finished-at="2017-07-03T23:09:18Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod -->
-      </class> <!-- com.javaSampleCode.testng.DataProviderAndFactorySampleCodeServiceTest -->
+        </test-method> <!-- doThrowWithWhenUsingMethodWithReturnType -->
+        <test-method status="PASS" signature="doThrowWithWhenUsingMethodWithVoidReturnType()[pri:0, instance:com.javaSampleCode.mockito.MockingSampleCode@7f560810]" name="doThrowWithWhenUsingMethodWithVoidReturnType" duration-ms="3" started-at="2017-07-03T23:09:18Z" finished-at="2017-07-03T23:09:18Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doThrowWithWhenUsingMethodWithVoidReturnType -->
+        <test-method status="PASS" signature="spy()[pri:0, instance:com.javaSampleCode.mockito.MockingSampleCode@7f560810]" name="spy" duration-ms="20" started-at="2017-07-03T23:09:18Z" finished-at="2017-07-03T23:09:18Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- spy -->
+        <test-method status="PASS" signature="whenThenForMultipleCall()[pri:0, instance:com.javaSampleCode.mockito.MockingSampleCode@7f560810]" name="whenThenForMultipleCall" duration-ms="5" started-at="2017-07-03T23:09:18Z" finished-at="2017-07-03T23:09:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whenThenForMultipleCall -->
+        <test-method status="PASS" signature="whenWithDoReturn()[pri:0, instance:com.javaSampleCode.mockito.MockingSampleCode@7f560810]" name="whenWithDoReturn" duration-ms="1" started-at="2017-07-03T23:09:18Z" finished-at="2017-07-03T23:09:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whenWithDoReturn -->
+        <test-method status="PASS" signature="whenWithReturn()[pri:0, instance:com.javaSampleCode.mockito.MockingSampleCode@7f560810]" name="whenWithReturn" duration-ms="1" started-at="2017-07-03T23:09:18Z" finished-at="2017-07-03T23:09:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whenWithReturn -->
+        <test-method status="PASS" signature="whenWithThenThrow()[pri:0, instance:com.javaSampleCode.mockito.MockingSampleCode@7f560810]" name="whenWithThenThrow" duration-ms="3" started-at="2017-07-03T23:09:18Z" finished-at="2017-07-03T23:09:18Z">
+          <exception class="java.lang.IllegalArgumentException">
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whenWithThenThrow -->
+      </class> <!-- com.javaSampleCode.mockito.MockingSampleCode -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.javaSampleCode.testng.TestNgSampleCode">
+      <class name="com.javaSampleCode.mockito.MockingSampleCode">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="f"/>
+          <include name="whenWithThenThrow"/>
         </methods>
-      </class> <!-- com.javaSampleCode.testng.TestNgSampleCode -->
+      </class> <!-- com.javaSampleCode.mockito.MockingSampleCode -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

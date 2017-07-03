@@ -17,4 +17,13 @@ public class TestNgSampleCode extends UtilityBaseClass {
 	public void method3() {
 		System.out.println("Method 3");
 	}
+
+	@Test(expectedExceptions = { IllegalArgumentException.class, NullPointerException.class })
+	public void method4() {
+		innerMethod();
+	}
+
+	private void innerMethod() throws IllegalArgumentException, NullPointerException {
+		throw new IllegalArgumentException();
+	}
 }
