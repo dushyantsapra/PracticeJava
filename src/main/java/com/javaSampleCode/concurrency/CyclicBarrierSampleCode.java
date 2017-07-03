@@ -5,6 +5,8 @@ import java.util.concurrent.CyclicBarrier;
 
 //Latches are for waiting for events; barriers are for waiting for other threads. - Java Concurrency in Practice
 
+//CyclicBarrier can be used where we have divided the task with n threads and each thread must wait for other thread after doing there part. 
+
 class Task implements Runnable {
 	private CyclicBarrier barrier;
 
