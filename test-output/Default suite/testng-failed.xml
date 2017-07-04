@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.javaSampleCode.mockito.MockingSampleCode">
+      <class name="com.javaSampleCode.mockito.MockitoSpySampleCode">
         <methods>
-          <include name="whenWithThenThrow"/>
+          <include name="whenUsingTheSpyAnnotation_thenObjectIsSpied"/>
         </methods>
-      </class> <!-- com.javaSampleCode.mockito.MockingSampleCode -->
+      </class> <!-- com.javaSampleCode.mockito.MockitoSpySampleCode -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
