@@ -7,10 +7,10 @@ import java.util.concurrent.CyclicBarrier;
 
 //CyclicBarrier can be used where we have divided the task with n threads and each thread must wait for other thread after doing there part. 
 
-class Task implements Runnable {
+class CyclicBarrierTask implements Runnable {
 	private CyclicBarrier barrier;
 
-	public Task(CyclicBarrier barrier) {
+	public CyclicBarrierTask(CyclicBarrier barrier) {
 		this.barrier = barrier;
 	}
 
@@ -38,9 +38,9 @@ public class CyclicBarrierSampleCode {
 			}
 		});
 		// starting each of thread
-		Thread t1 = new Thread(new Task(cb), "Thread 1");
-		Thread t2 = new Thread(new Task(cb), "Thread 2");
-		Thread t3 = new Thread(new Task(cb), "Thread 3");
+		Thread t1 = new Thread(new CyclicBarrierTask(cb), "Thread 1");
+		Thread t2 = new Thread(new CyclicBarrierTask(cb), "Thread 2");
+		Thread t3 = new Thread(new CyclicBarrierTask(cb), "Thread 3");
 
 		t1.start();
 		t2.start();

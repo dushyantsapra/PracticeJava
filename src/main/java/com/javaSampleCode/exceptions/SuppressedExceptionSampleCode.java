@@ -1,7 +1,7 @@
 package com.javaSampleCode.exceptions;
 
 /* Sample Code for "try-with-resource" and "Suppressed Exception".
- * 1. try-with-resource remove the need of finally as it it self call/close the open resource, given the resource implementing Closeable OR AutoCloseable interface.
+ * 1. try-with-resource remove the need of finally as it itself call/close the open resource, given the resource implementing Closeable OR AutoCloseable interface.
  * 2. Suppressed Exception(introduced in java7) enables to add/suppress exception occurred in finally block in the exception object occurred in try block. 
  * */
 
