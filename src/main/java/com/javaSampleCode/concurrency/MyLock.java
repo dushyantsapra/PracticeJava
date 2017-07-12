@@ -1,7 +1,7 @@
 package com.javaSampleCode.concurrency;
 
 public class MyLock {
-	private boolean isLocked;
+	private volatile boolean isLocked;
 
 	public MyLock() {
 		isLocked = false;

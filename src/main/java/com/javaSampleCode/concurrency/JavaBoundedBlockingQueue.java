@@ -7,7 +7,7 @@ import java.util.List;
 public class JavaBoundedBlockingQueue {
 
 	private List<String> list = null;
-	private int length;
+	private volatile int length;
 	private MyLock lock = null;
 
 	public JavaBoundedBlockingQueue() {
@@ -27,6 +27,7 @@ public class JavaBoundedBlockingQueue {
 		if (length < list.size()) {
 			System.out.format("Thread %s added : %s", str);
 			list.add(str);
+			length += 1;
 		} else {
 			isAdded = false;
 		}
@@ -41,6 +42,7 @@ public class JavaBoundedBlockingQueue {
 		if (length != 0) {
 			System.out.format("Thread %s removed : %s", list.get(list.size() - 1));
 			value = list.remove(list.size() - 1);
+			length -= 1;
 		}
 		lock.unlock();
 		return value;

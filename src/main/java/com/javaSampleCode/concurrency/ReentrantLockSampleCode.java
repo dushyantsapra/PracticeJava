@@ -1,9 +1,9 @@
 package com.javaSampleCode.concurrency;
 
 public class ReentrantLockSampleCode {
-	private boolean isLocked;
-	private int lockCount;
-	private Thread lockingThread;
+	private volatile boolean isLocked;
+	private volatile int lockCount;
+	private volatile Thread lockingThread;
 
 	public ReentrantLockSampleCode() {
 		isLocked = false;
@@ -29,6 +29,7 @@ public class ReentrantLockSampleCode {
 
 		if (lockCount == 0) {
 			isLocked = false;
+			lockingThread = null;
 			notifyAll();
 		}
 	}
