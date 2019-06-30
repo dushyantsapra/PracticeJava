@@ -1,21 +1,19 @@
 package com.dsa.stack;
 
-import com.dsa.linkedList.LLNode;
+public class Stack<T> {
+    private StackNode<T> head;
 
-public class Stack {
-    private LLNode head;
-
-    public void push(int data) {
-        head = new LLNode(data, head);
+    public void push(T data) {
+        head = new StackNode<>(data, head);
     }
 
-    public LLNode pop() {
-        LLNode node = head;
+    public StackNode<T> pop() {
+        StackNode<T> node = head;
         head = head.getNext();
         return node;
     }
 
-    public LLNode peek() {
+    public StackNode<T> peek() {
         return head;
     }
 
@@ -24,7 +22,7 @@ public class Stack {
     }
 
     public static void main(String[] args) {
-        Stack stack = new Stack();
+        Stack<Integer> stack = new Stack<>();
         stack.push(1);
         stack.push(2);
         stack.push(3);
@@ -38,6 +36,5 @@ public class Stack {
         System.out.println(stack.pop().getData());
         System.out.println(stack.pop().getData());
         System.out.println(stack.pop().getData());
-
     }
 }
