@@ -7,14 +7,16 @@ public class Stack<T> {
         head = new StackNode<>(data, head);
     }
 
-    public StackNode<T> pop() {
+    public T pop() {
         StackNode<T> node = head;
         head = head.getNext();
-        return node;
+        return node.getData();
     }
 
-    public StackNode<T> peek() {
-        return head;
+    public T peek() {
+        if (!isEmpty())
+            return head.getData();
+        return null;
     }
 
     public boolean isEmpty() {
@@ -28,13 +30,15 @@ public class Stack<T> {
         stack.push(3);
         stack.push(4);
 
-        System.out.println(stack.peek().getData());
+        System.out.println(stack.peek());
 
         System.out.println();
 
-        System.out.println(stack.pop().getData());
-        System.out.println(stack.pop().getData());
-        System.out.println(stack.pop().getData());
-        System.out.println(stack.pop().getData());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+
+        System.out.println(stack.peek());
     }
 }
