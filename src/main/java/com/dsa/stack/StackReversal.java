@@ -4,7 +4,7 @@ public class StackReversal<T> {
     public static <T> Stack<T> reverseStack(Stack<T> s) {
         Stack<T> stack = new Stack<>();
         while (!s.isEmpty()) {
-            stack.push(s.pop().getData());
+            stack.push(s.pop());
         }
         return stack;
     }
@@ -18,13 +18,13 @@ public class StackReversal<T> {
 
         stack = reverseStack(stack);
 
-        System.out.println(stack.peek().getData());
+        System.out.println(stack.peek());
 
         System.out.println();
 
-        System.out.println(stack.pop().getData());
-        System.out.println(stack.pop().getData());
-        System.out.println(stack.pop().getData());
-        System.out.println(stack.pop().getData());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
     }
 }
