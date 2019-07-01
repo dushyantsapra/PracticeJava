@@ -2,14 +2,20 @@ package com.dsa.stack;
 
 public class Stack<T> {
     private StackNode<T> head;
+    private int size;
 
     public void push(T data) {
         head = new StackNode<>(data, head);
+        size++;
     }
 
     public T pop() {
+        if (head == null) {
+            return null;
+        }
         StackNode<T> node = head;
         head = head.getNext();
+        size--;
         return node.getData();
     }
 
@@ -21,6 +27,10 @@ public class Stack<T> {
 
     public boolean isEmpty() {
         return head == null ? true : false;
+    }
+
+    public int size() {
+        return size;
     }
 
     public static void main(String[] args) {
