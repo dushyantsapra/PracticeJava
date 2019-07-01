@@ -1,30 +1,30 @@
 package com.dsa.linkedList;
 
-public class LLNode {
-    private int data;
+public class LLNode<T> {
+    private T data;
     private LLNode next;
 
     public LLNode() {
     }
 
-    public LLNode(int data, LLNode next) {
+    public LLNode(T data, LLNode next) {
         this.data = data;
         this.next = next;
     }
 
-    public int getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(T data) {
         this.data = data;
     }
 
-    public LLNode getNext() {
+    public LLNode<T> getNext() {
         return next;
     }
 
-    public void setNext(LLNode next) {
+    public void setNext(LLNode<T> next) {
         this.next = next;
     }
 }
