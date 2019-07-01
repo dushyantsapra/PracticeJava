@@ -1,5 +1,7 @@
 package com.dsa.tree;
 
+import com.dsa.linkedList.LinkedList;
+
 public class BinarySearchTree {
     public static Node insert(int data, Node rootNode) {
         if (rootNode == null) {
