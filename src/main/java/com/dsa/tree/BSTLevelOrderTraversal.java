@@ -12,8 +12,7 @@ public class BSTLevelOrderTraversal {
         }
         Stack<Node> stack = new Stack<>();
         while (!s.isEmpty()) {
-            StackNode<Node> stackNode = s.pop();
-            Node node = stackNode.getData();
+            Node node = s.pop();
             System.out.println(node.getData());
             if (node.getLeft() != null) {
                 stack.push(node.getLeft());
