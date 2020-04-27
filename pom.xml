@@ -119,7 +119,7 @@
                     <archive>
                         <manifest>
                             <!-- Jar file entry point -->
-                            <mainClass>com.zeromq.examples.ZeroMQPubExample</mainClass>
+                            <mainClass>com.sftp..SFTPMain</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -130,7 +130,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.zeromq.examples.ZeroMQPubExample</mainClass>
+                            <mainClass>com.sftp.SFTPMain</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
